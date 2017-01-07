@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="Sei" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmlmime="http://www.w3.org/2004/11/xmlmime" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<ns1:listarTiposProcedimentoResponse>
+			<parametros SOAP-ENC:arrayType="ns1:TipoProcedimento[285]" xsi:type="ns1:ArrayOfTipoProcedimento">
+				<item xsi:type="ns1:TipoProcedimento">
+					<IdTipoProcedimento xsi:type="xsd:string">100000381</IdTipoProcedimento>
+					<Nome xsi:type="xsd:string">Acesso a Informacao Demanda do e-SIC</Nome>
+				</item>
+				<item xsi:type="ns1:TipoProcedimento">
+					<IdTipoProcedimento xsi:type="xsd:string">100000347</IdTipoProcedimento>
+					<Nome xsi:type="xsd:string">Acompanhamento Legislativo: Camara dos Deputados</Nome>
+				</item>
+				<item xsi:type="ns1:TipoProcedimento">
+					<IdTipoProcedimento xsi:type="xsd:string">100000348</IdTipoProcedimento>
+					<Nome xsi:type="xsd:string">Acompanhamento Legislativo: Congresso Nacional</Nome>
+				</item>
+			</parametros>
+		</ns1:listarTiposProcedimentoResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

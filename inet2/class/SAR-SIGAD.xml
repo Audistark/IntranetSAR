@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<soap:Body>
+		<ProtocoloPesquisarResponse xmlns="http://www.ikhon.com.br/ws/">
+			<ProtocoloPesquisarResult>
+				<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+					<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+						<xs:complexType>
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Protocolo">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="COD_PROTOCOLO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="COD_PROTOCOLO_TIPO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="TXT_NUMERO" type="xs:string" minOccurs="0" />
+											<xs:element name="COD_COPIA" type="xs:decimal" minOccurs="0" />
+											<xs:element name="DT_ABERTURA" type="xs:dateTime" minOccurs="0" />
+											<xs:element name="DT_PROTOCOLO" type="xs:dateTime" minOccurs="0" />
+											<xs:element name="COD_ASSUNTO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="COD_SITUACAO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="COD_DOCUMENTO_TIPO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="TXT_IDENTIFICACAO" type="xs:string" minOccurs="0" />
+											<xs:element name="TXT_ASSUNTO" type="xs:string" minOccurs="0" />
+											<xs:element name="COD_ACESSO_TIPO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="COD_ORGAO_ATUAL" type="xs:decimal" minOccurs="0" />
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Interessado">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="COD_PROTOCOLO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="COD_INTERESSADO" type="xs:decimal" minOccurs="0" />
+											<xs:element name="TXT_INTERESSADO" type="xs:string" minOccurs="0" />
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:complexType>
+						<xs:unique name="Constraint1">
+							<xs:selector xpath=".//Protocolo" />
+							<xs:field xpath="COD_PROTOCOLO" />
+						</xs:unique>
+						<xs:keyref name="cod_protocolo" refer="Constraint1">
+							<xs:selector xpath=".//Interessado" />
+							<xs:field xpath="COD_PROTOCOLO" />
+						</xs:keyref>
+					</xs:element>
+				</xs:schema>
+			</ProtocoloPesquisarResult>
+		</ProtocoloPesquisarResponse>
+	</soap:Body>
+</soap:Envelope>

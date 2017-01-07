@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="Sei" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmlmime="http://www.w3.org/2004/11/xmlmime" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<ns1:listarUnidadesResponse>
+			<parametros SOAP-ENC:arrayType="ns1:Unidade[2]" xsi:type="ns1:ArrayOfUnidade">
+				<item xsi:type="ns1:Unidade">
+					<IdUnidade xsi:type="xsd:string">110000042</IdUnidade>
+					<Sigla xsi:type="xsd:string">121-GTCA</Sigla>
+					<Descricao xsi:type="xsd:string">Ger�ncia de Opera��es de Empresas de Transporte A�reo</Descricao>
+				</item>
+				<item xsi:type="ns1:Unidade">
+					<IdUnidade xsi:type="xsd:string">110000083</IdUnidade>
+					<Sigla xsi:type="xsd:string">ARQ/ANAC/DF</Sigla>
+					<Descricao xsi:type="xsd:string">ARQUIVO</Descricao>
+				</item>
+			</parametros>
+		</ns1:listarUnidadesResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+

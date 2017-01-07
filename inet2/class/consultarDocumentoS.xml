@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="Sei" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xmlmime="http://www.w3.org/2004/11/xmlmime" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+	<ns1:consultarDocumentoResponse>
+		<parametros xsi:type="ns1:RetornoConsultaDocumento">
+			<IdProcedimento xsi:type="xsd:string">150</IdProcedimento>
+			<ProcedimentoFormatado xsi:type="xsd:string">00058.000018/2016-11</ProcedimentoFormatado>
+			<IdDocumento xsi:type="xsd:string">151</IdDocumento>
+			<DocumentoFormatado xsi:type="xsd:string">0000097</DocumentoFormatado>
+			<LinkAcesso xsi:type="xsd:string">http://sei-lab.anac.gov.br/sei/controlador.php?acao=procedimento_trabalhar&amp;id_procedimento=150&amp;id_documento=151</LinkAcesso>
+			<Serie xsi:type="ns1:Serie">
+				<IdSerie xsi:type="xsd:string">12</IdSerie>
+				<Nome xsi:type="xsd:string">Memorando</Nome>
+			</Serie>
+			<Numero xsi:type="xsd:string">12</Numero>
+			<Data xsi:type="xsd:string">11/04/2016</Data>
+			<UnidadeElaboradora xsi:type="ns1:Unidade">
+				<IdUnidade xsi:type="xsd:string">110000005</IdUnidade>
+				<Sigla xsi:type="xsd:string">GTGI</Sigla>
+				<Descricao xsi:type="xsd:string">Gerencia Tecnica de Gestao da Informacao</Descricao>
+			</UnidadeElaboradora>
+			<AndamentoGeracao xsi:type="ns1:Andamento">
+				<Descricao xsi:type="xsd:string">Gerado documento publico 0000097 (Memorando)</Descricao>
+				<DataHora xsi:type="xsd:string">11/04/2016 10:59:17</DataHora>
+				<Unidade xsi:type="ns1:Unidade">
+					<IdUnidade xsi:type="xsd:string">110000005</IdUnidade>
+					<Sigla xsi:type="xsd:string">GTGI</Sigla>
+					<Descricao xsi:type="xsd:string">Gerencia Tecnica de Gestao da Informacao</Descricao>
+				</Unidade>
+				<Usuario xsi:type="ns1:Usuario">
+					<IdUsuario xsi:type="xsd:string">100001586</IdUsuario>
+					<Sigla xsi:type="xsd:string">tony.yoshida</Sigla>
+					<Nome xsi:type="xsd:string">Tony Hikari Yoshida</Nome>
+				</Usuario>
+			</AndamentoGeracao>
+			<Assinaturas SOAP-ENC:arrayType="ns1:Assinatura[1]" xsi:type="ns1:ArrayOfAssinatura">
+				<item xsi:type="ns1:Assinatura">
+					<Nome xsi:type="xsd:string">Tony Hikari Yoshida</Nome>
+					<CargoFuncao xsi:type="xsd:string">Gerente Tecnico</CargoFuncao>
+					<DataHora xsi:type="xsd:string">11/04/2016 11:25:50</DataHora>
+				</item>
+			</Assinaturas>
+			<Publicacao xsi:nil="true" xsi:type="ns1:Publicacao"/>
+		</parametros>
+	</ns1:consultarDocumentoResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

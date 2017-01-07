@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="Sei" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xmlmime="http://www.w3.org/2004/11/xmlmime" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<ns1:consultarProcedimentoResponse>
+			<parametros xsi:type="ns1:RetornoConsultaProcedimento">
+				<IdProcedimento xsi:type="xsd:string">150</IdProcedimento>
+				<ProcedimentoFormatado xsi:type="xsd:string">00058.000018/2016-11</ProcedimentoFormatado>
+				<Especificacao xsi:type="xsd:string">Teste para bloco de assinatura</Especificacao>
+				<DataAutuacao xsi:type="xsd:string">11/04/2016</DataAutuacao>
+				<LinkAcesso xsi:type="xsd:string">http://sei-lab.anac.gov.br/sei/controlador.php?acao=procedimento_trabalhar&amp;id_procedimento=150</LinkAcesso>
+				<TipoProcedimento xsi:type="ns1:TipoProcedimento">
+					<IdTipoProcedimento xsi:type="xsd:string">100000173</IdTipoProcedimento>
+					<Nome xsi:type="xsd:string">Pessoal: Emissao de Procuracao</Nome>
+				</TipoProcedimento>
+				<AndamentoGeracao xsi:nil="true" xsi:type="ns1:Andamento"/>
+				<AndamentoConclusao xsi:nil="true" xsi:type="ns1:Andamento"/>
+				<UltimoAndamento xsi:nil="true" xsi:type="ns1:Andamento"/>
+				<UnidadesProcedimentoAberto SOAP-ENC:arrayType="ns1:UnidadeProcedimentoAberto[0]" xsi:type="ns1:ArrayOfUnidadeProcedimentoAberto"/>
+				<Assuntos SOAP-ENC:arrayType="ns1:Assunto[0]" xsi:type="ns1:ArrayOfAssunto"/>
+				<Interessados SOAP-ENC:arrayType="ns1:Interessado[0]" xsi:type="ns1:ArrayOfInteressado"/>
+				<Observacoes SOAP-ENC:arrayType="ns1:Observacao[0]" xsi:type="ns1:ArrayOfObservacao"/>
+				<ProcedimentosRelacionados SOAP-ENC:arrayType="ns1:ProcedimentoResumido[0]" xsi:type="ns1:ArrayOfProcedimentoResumido"/>
+				<ProcedimentosAnexados SOAP-ENC:arrayType="ns1:ProcedimentoResumido[0]" xsi:type="ns1:ArrayOfProcedimentoResumido"/>
+			</parametros>
+		</ns1:consultarProcedimentoResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+

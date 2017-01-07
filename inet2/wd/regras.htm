@@ -1,0 +1,266 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Regras para cálculo do indicador de atraso da ANAC na analise dos processos (</title>
+</head>
+
+<body>
+
+<form method="POST">
+    <pre>
+    Regras para cálculo do indicador de atraso da ANAC na analise dos processos (resDelayANAC):
+
+
+        '--------------------------------------------------------------------------
+        ' resDelayANAC	- Indica atraso da ANAC na analise dos processos
+        If m_oAIRData.ANAC = 0 Then
+            resDelayANAC = RES_NONE
+
+        ' CRITICAL
+        ElseIf m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T1"> And _
+           ( m_oAIRData.ANACDelay &gt; <input type="text"
+size="5" name="T2"> Or _
+             m_oAIRData.ANACMaxDays &gt; <input type="text"
+size="5" name="T3"> Or _ 
+           ( m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T4"> And _
+             m_oAIRData.ANAC60d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T5"> ) Or _
+           ( m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T6"> And _
+             m_oAIRData.ANAC30d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T7"> ) ) Then
+        resDelayANAC = RES_CRITICO
+
+
+        ' RES_RUIM
+        ElseIf m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T8"> And _
+               ( m_oAIRData.ANACDelay &gt; <input type="text"
+size="5" name="T9"> Or _
+                 m_oAIRData.ANACMaxDays &gt; <input type="text"
+size="5" name="T10"> Or _ 
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T11"> And _
+                   m_oAIRData.ANAC60d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T12"> ) Or _
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T13"> And _
+                   m_oAIRData.ANAC30d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T14"> ) ) Then
+                resDelayANAC = RES_RUIM
+
+        ' RES_ALERTA
+        ElseIf m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T15"> And _
+               ( m_oAIRData.ANACDelay &gt; <input type="text"
+size="5" name="T16"> Or _
+                 m_oAIRData.ANACMaxDays &gt; <input type="text"
+size="5" name="T17"> Or _ 
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T18"> And _
+                   m_oAIRData.ANAC60d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T19"> ) Or _
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T20"> And _
+                   m_oAIRData.ANAC30d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T21"> ) ) Then
+                resDelayANAC = RES_ALERTA
+
+        ' RES_BOM
+        ElseIf m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T22"> And _
+               ( m_oAIRData.ANACDelay &gt; <input type="text"
+size="5" name="T23"> Or _
+                 m_oAIRData.ANACMaxDays &gt; <input type="text"
+size="5" name="T24"> Or _ 
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T25"> And _
+                   m_oAIRData.ANAC60d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T26"> ) Or _
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T28"> And _
+                   m_oAIRData.ANAC30d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T27"> ) ) Then
+                resDelayANAC = RES_BOM
+
+        ' RES_OTIMO
+        ElseIf m_oAIRData.ANAC &gt; <input type="text" size="5"
+name="T29"> And _
+               ( m_oAIRData.ANACDelay &gt; <input type="text"
+size="5" name="T30"> Or _
+                 m_oAIRData.ANACMaxDays &gt; <input type="text"
+size="5" name="T31"> Or _ 
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T32"> And _
+                   m_oAIRData.ANAC60d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T33"> ) Or _
+                 ( m_oAIRData.ANAC &gt; <input type="text"
+size="5" name="T34"> And _
+                   m_oAIRData.ANAC30d/m_oAIRData.ANAC &gt; <input
+type="text" size="5" name="T35"> ) ) Then
+                resDelayANAC = RES_OTIMO
+
+        ' RES_NONE
+        Else
+            resDelayANAC = RES_NONE
+        End If
+
+
+        '--------------------------------------------------------------------------
+        ' resDelayClient    - Indica atraso da OM na resposta dos processos
+        If m_oAIRData.Client = 0 Then
+            resDelayClient = RES_NONE
+
+        ' CRITICAL
+        ElseIf m_oAIRData.Client &gt; <input type="text" size="5"
+name="T36"> And _
+               ( m_oAIRData.ClientDelay &gt; <input type="text"
+size="5" name="T37"> Or _
+                 m_oAIRData.ClientMaxDays &gt; <input type="text"
+size="5" name="T38"> ) Then
+                resDelayClient = RES_CRITICO
+
+        ' RES_RUIM
+        ElseIf m_oAIRData.Client &gt; <input type="text" size="5"
+name="T39"> And _
+               ( m_oAIRData.ClientDelay &gt; <input type="text"
+size="5" name="T40"> Or _
+                 m_oAIRData.ClientMaxDays &gt; <input type="text"
+size="5" name="T41"> ) Then
+                resDelayClient = RES_RUIM
+
+        ' RES_ALERTA
+        ElseIf m_oAIRData.Client &gt; <input type="text" size="5"
+name="T42"> And _
+               ( m_oAIRData.ClientDelay &gt; <input type="text"
+size="5" name="T43"> Or _
+                 m_oAIRData.ClientMaxDays &gt; <input type="text"
+size="5" name="T44"> ) Then
+                resDelayClient = RES_ALERTA
+
+        ' RES_BOM
+        ElseIf m_oAIRData.Client &gt; <input type="text" size="5"
+name="T45"> And _
+               ( m_oAIRData.ClientDelay &gt; <input type="text"
+size="5" name="T46"> Or _
+                 m_oAIRData.ClientMaxDays &gt; <input type="text"
+size="5" name="T47"> ) Then
+                resDelayClient = RES_BOM
+
+        ' RES_OTIMO
+        ElseIf m_oAIRData.Client &gt; <input type="text" size="5"
+name="T48"> And _
+               ( m_oAIRData.ClientDelay &gt; <input type="text"
+size="5" name="T49"> Or _
+                 m_oAIRData.ClientMaxDays &gt; <input type="text"
+size="5" name="T50"> ) Then
+                resDelayClient = RES_OTIMO
+
+        ' RES_NONE
+        Else
+            resDelayClient = RES_NONE
+        End If
+
+
+        '--------------------------------------------------------------------------
+        ' resDelayDelivery    - Indica atraso na distribuição de processos
+        If m_oAIRData.Delivery = 0 Then
+            resDelayDelivery = RES_NONE
+
+        ' CRITICAL
+        ElseIf m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T51"> And _
+               ( m_oAIRData.DeliveryDelay &gt; <input type="text"
+size="5" name="T52"> Or _
+                 m_oAIRData.DeliveryMaxDays &gt; <input
+type="text" size="5" name="T53"> Or _ 
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T54"> And _
+                   m_oAIRData.Delivery14d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T55"> ) Or _
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T57"> And _
+                   m_oAIRData.Delivery7d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T56"> ) ) Then
+                resDelayDelivery = RES_CRITICO
+
+        ' RES_RUIM
+        ElseIf m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T58"> And _
+               ( m_oAIRData.DeliveryDelay &gt; <input type="text"
+size="5" name="T59"> Or _
+                 m_oAIRData.DeliveryMaxDays &gt; <input
+type="text" size="5" name="T60"> Or _ 
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T61"> And _
+                   m_oAIRData.Delivery14d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T62"> ) Or _
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T63"> And _
+                   m_oAIRData.Delivery7d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T64"> ) ) Then
+                resDelayDelivery = RES_RUIM
+
+        ' RES_ALERTA
+        ElseIf m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T65"> And _
+               ( m_oAIRData.DeliveryDelay &gt; <input type="text"
+size="5" name="T66"> Or _
+                 m_oAIRData.DeliveryMaxDays &gt; <input
+type="text" size="5" name="T67"> Or _ 
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T68"> And _
+                   m_oAIRData.Delivery14d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T69"> ) Or _
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T70"> And _
+                   m_oAIRData.Delivery7d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T71"> ) ) Then
+                resDelayDelivery = RES_ALERTA
+
+        ' RES_BOM
+        ElseIf m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T72"> And _
+               ( m_oAIRData.DeliveryDelay &gt; <input type="text"
+size="5" name="T73"> Or _
+                 m_oAIRData.DeliveryMaxDays &gt; <input
+type="text" size="5" name="T74"> Or _ 
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T75"> And _
+                   m_oAIRData.Delivery14d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T76"> ) Or _
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T77"> And _
+                   m_oAIRData.Delivery7d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T78"> ) ) Then
+                resDelayDelivery = RES_BOM
+
+        ' RES_OTIMO
+        ElseIf m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T79"> And _
+               ( m_oAIRData.DeliveryDelay &gt; <input type="text"
+size="5" name="T80"> Or _
+                 m_oAIRData.DeliveryMaxDays &gt; <input
+type="text" size="5" name="T81"> Or _ 
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T82"> And _
+                   m_oAIRData.Delivery14d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T83"> ) Or _
+                 ( m_oAIRData.Delivery &gt; <input type="text"
+size="5" name="T84"> And _
+                   m_oAIRData.Delivery7d/m_oAIRData.Delivery &gt; <input
+type="text" size="5" name="T85"> ) ) Then
+                resDelayDelivery = RES_OTIMO
+
+        ' RES_NONE
+        Else
+            resDelayDelivery = RES_NONE
+        End If</pre>
+</form>
+</body>
+</html>

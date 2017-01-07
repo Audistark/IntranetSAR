@@ -1,0 +1,28 @@
+﻿Dim xml : xml = "<?xml version=""1.0"" encoding=""UTF-8""?>" & _
+"<SOAP-ENV:Envelope xmlns:SOAP-ENV=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:ns1=""Sei"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:SOAP-ENC=""http://schemas.xmlsoap.org/soap/encoding/"" xmlns:xmlmime=""http://www.w3.org/2004/11/xmlmime"" SOAP-ENV:encodingStyle=""http://schemas.xmlsoap.org/soap/encoding/"">" & _
+"	<SOAP-ENV:Body>" & _
+"		<ns1:consultarDocumentoResponse>" & _
+"		<parametros xsi:type=""ns1:RetornoConsultaDocumento"">" & _
+"				<IdProcedimento xsi:type=""xsd:string"">150</IdProcedimento>" & _
+"				<ProcedimentoFormatado xsi:type=""xsd:string"">00058.000018/2016-11</ProcedimentoFormatado>" & _
+"				<IdDocumento xsi:type=""xsd:string"">151</IdDocumento>" & _
+"				<DocumentoFormatado xsi:type=""xsd:string"">0000097</DocumentoFormatado>" & _
+"				<LinkAcesso xsi:type=""xsd:string"">http://sei-lab.anac.gov.br/sei/controlador.php?acao=procedimento_trabalhar&amp;id_procedimento=150&amp;id_documento=151</LinkAcesso>" & _
+"				<Serie xsi:type=""ns1:Serie"">" & _
+"					<IdSerie xsi:type=""xsd:string"">12</IdSerie>" & _
+"					<Nome xsi:type=""xsd:string"">Memorando</Nome>" & _
+"				</Serie>" & _
+"				<Numero xsi:type=""xsd:string"">12</Numero>" & _
+"				<Data xsi:type=""xsd:string"">11/04/2016</Data>" & _
+"				<UnidadeElaboradora xsi:type=""ns1:Unidade"">" & _
+"					<IdUnidade xsi:type=""xsd:string"">110000005</IdUnidade>" & _
+"					<Sigla xsi:type=""xsd:string"">GTGI</Sigla>" & _
+"					<Descricao xsi:type=""xsd:string"">Gerencia Tecnica de Gestao da Informacao</Descricao>" & _
+"				</UnidadeElaboradora>" & _
+"				<AndamentoGeracao xsi:nil=""true"" xsi:type=""ns1:Andamento""/>" & _
+"				<Assinaturas SOAP-ENC:arrayType=""ns1:Assinatura[0]"" xsi:type=""ns1:ArrayOfAssinatura""/>" & _
+"				<Publicacao xsi:nil=""true"" xsi:type=""ns1:Publicacao""/>" & _
+"			</parametros>" & _
+"		</ns1:consultarDocumentoResponse>" & _
+"	</SOAP-ENV:Body>" & _
+"</SOAP-ENV:Envelope>"

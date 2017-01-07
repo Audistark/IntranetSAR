@@ -1,0 +1,383 @@
+
+<!-- #include virtual="/inet2/header-bs.asp" -->
+  <script language="JavaScript" type="text/javascript">
+	// zoom
+	var fs = window.top.document.getElementsByTagName("frameset");
+	fs[1].cols = "8,*"
+  </script>
+  <script language="JavaScript" type="text/javascript">
+    targetElement = null;
+    function makeSelection(frm,id) {
+        var url = "https://sistemas.anac.gov.br/SACI/SCD/Chamado/editarChamado.asp"
+        targetElement = frm.elements[id];
+        url = url + '?idDemanda=' + targetElement.value
+        var handle = window.open(url, 'Demanda', 'top=0,left=0,width=800,height=600,scrollbars=1');
+    }
+  </script>
+  <style>
+	a:link {color: red; text-decoration: none;}
+	a:visited {color: red; text-decoration: none;}
+	a:hover {color: red; text-decoration: none;}
+	a:active {color: red; text-decoration: none;}
+	.SarFont {
+		font-family: Calibri;
+		font-size: 18px;
+		color: black;
+		font-style: normal;
+	}
+  </style>
+</head>
+<body>
+<center>
+<table style="width: 100%; text-align: left;" border="0" cellpadding="0"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="4" width="24">&nbsp;&nbsp;&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td colspan="1" rowspan="4" width="24">&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+      <td><img src="img/TI-Header.jpg"></td>
+      <td
+ style="width: 100%; text-align: center; font-family: Times New Roman;"
+ valign="middle"><font size="28">Gestão de TI-SAR</font></td>
+    </tr>
+    <tr>
+      <td valign="top"><br>
+      </td>
+      <td class="SarFont" style="text-align: right;">Atualizado
+em: <%=updated %></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td class="SarFont" style="text-align: right;">User: <%=user %></td>
+    </tr>
+  </tbody>
+</table>
+<table style="text-align: left;" border="0" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="5" width="12">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td colspan="1" rowspan="5" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;" colspan="1" rowspan="2">
+      <table style="text-align: left; height: 289px;" border="0">
+        <tbody>
+          <tr>
+            <td><img
+ style="border: 0px solid ; width: 115px; height: 115px;" alt=""
+ src="img/TI-Header2.jpg"></td>
+            <td class="SarFont">&nbsp;&nbsp;
+&nbsp;&nbsp; A <span style="font-weight: bold;">Gestão de TI
+da SAR</span> surgiu de uma iniciativa conjunta da SAR e STI. O
+grupo de&nbsp;gestão de TI-SAR controla todas as demandas de TI da
+SAR
+e as prioriza&nbsp;junto à STI. Essas demandas incluem: novos
+desenvolvimentos;
+melhorias; modificações; alteração de dados; e correções de erros
+(bugs).<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" rowspan="1" valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="SarFont" colspan="2" rowspan="1" valign="top"><b><font
+ size="+2">Gestores dos Sistemas</font></b></td>
+          </tr>
+          <tr>
+            <td class="SarFont" colspan="2">&nbsp;&nbsp; &nbsp;&nbsp;
+Todo sistema (Ex.: SVA; SIAC; Intranet SAR;
+GIASO; eDIAM; etc..) tem gestores designados,
+normalmente em número de 2(dois), e que são os responsáveis por
+centralizar o registro de demandas de TI no painel SCD (Sistema de
+Controle de Demandas) da STI, tais como: solicitações de correções de
+erro; melhorias no sistema; alteração de dados;&nbsp; etc.. e também
+são os gestores que testam as implementações e as aprovam.<br>
+&nbsp; &nbsp;&nbsp;&nbsp; Além disso, são os gestores que tem a
+prerrogativa de definir as regras de autorização dos usuários&nbsp;
+para
+acesso as funcionalidades dos sistemas (permissões/autorizações de uso).<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td colspan="1" rowspan="4" bgcolor="white" valign="middle"
+ width="8"><br>
+      <br>
+      <br>
+      <br>
+      </td>
+      <td style="width: 420px;" valign="top" width="420">
+      <table style="text-align: left; width: 100%;" border="0">
+        <tbody>
+          <tr>
+            <td style="text-align: center;"><a href="gti-demands.asp"><img
+ alt="" src="img/Statistics.png" border="0" height="143" width="160"></a></td>
+            <td
+ style="font-family: Times New Roman; text-align: center; font-weight: bold; color: red; width: 100%;"><a
+ href="gti-demands.asp"><font size="+2">Estatísticas
+de<br>
+atendimento às<br>
+demandas de TI</font></a></td>
+          </tr>
+          <tr>
+            <td class="SarFont" colspan="2" rowspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Clique no
+link da imagem acima
+para acessar as estatísticas atualizadas do atendimento às demandas de
+TI da SAR (Software).</td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <table
+ style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0">
+        <tbody>
+          <tr>
+            <td valign="top"><img alt="" src="img/row.png" height="2"
+ width="410"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="SarFont" style="font-weight: bold;"
+ align="center">Consulta
+Situação de Demanda:</td>
+          </tr>
+          <tr>
+            <td class="SarFont" align="center" valign="middle">
+            <form>
+              <p>Id: <input size="12"
+ name="idDemanda" type="text"> <input value="Submit"
+ onclick="makeSelection(this.form,'idDemanda');" type="button"></p>
+            </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+      <table style="text-align: left; width: 100%;" border="0"
+ cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td><a href="/Gestores.asp"><img
+ style="border: 0px solid ; width: 219px; height: 230px;" alt=""
+ src="img/images.jpg"></a></td>
+            <td class="SarFont">&nbsp;&nbsp;&nbsp;&nbsp; São os
+gestores dos sistemas/subsistemas que devem ser contatados sempre que
+for necessário, por exemplo:<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1. Solicitar acesso ao Sistema/Subsistema;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 2. Comunicar algum erro no Software;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3. Sugerir melhorias e modificações.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 4. Fazer alguma reclamação sobre o Sistema.<br>
+            <br>
+&nbsp;&nbsp;&nbsp;&nbsp; A tabela com os sistemas/subsistemas e seus
+respectivos gestores pode ser acessada no endereço <a
+ href="/Gestores.asp">http://sar/Gestores.asp</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="SarFont" colspan="2" rowspan="1"><b>Modelos
+utilizados para especificação de demanda:</b><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            <div class="accordion" id="FormDemand">
+            <div class="accordion-group">
+            <div class="accordion-heading"> <a class="accordion-toggle"
+ data-toggle="collapse" data-parent="#FormDemand" href="#collapseOne">
+1. Correção de Erro</a> </div>
+            <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner"> a. Descrição detalhada do
+problema. Incluir o que o usuário estava tentando fazer ao ocorrer o
+erro e qual era o comportamento esperado;<br>
+b. Passo a passo de como reproduzir o problema, que inclua como o
+usuário chegou a tela com o erro;<br>
+c. Print de todas as telas completamente preenchidas antes de ocorrer o
+erro e contendo o erro;<br>
+d. Informações adicionais de requisitos de teste para verificação da
+correção (que testes efetuar para considerar a correção satisfatória). </div>
+            </div>
+            </div>
+            <div class="accordion-group">
+            <div class="accordion-heading"> <a class="accordion-toggle"
+ data-toggle="collapse" data-parent="#FormDemand" href="#collapseTwo">
+2. Solicitação de Melhoria</a> </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner"> a. Finalidade e Justificativa
+da Modificação/Melhoria proposta;<br>
+b. Descrição detalhada e funcional da modificação/melhoria, incluindo:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;i. introdução;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ii. escopo e contexto;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iii. funcionalidade(s);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iv. fluxos de execução (algoritmo ou
+fluxograma), incluindo as condições de erro e ações decorrentes;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;v. interfaces (telas) com o usuário e suas
+lógicas (msg de erro, formato e validação dos campos, etc.);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vi. especificação de formulários (tamanho dos
+campos e conteúdo);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vii. regras de negócio;<br>
+c. Avaliação negativa de impactos/conflito relativo a outras
+funcionalidades e produtos;<br>
+d. Alguns casos de uso como exemplo, com as telas, formulários e
+relatórios preenchidos;<br>
+e. Documento de Especificação de Software do Produto (se houver),
+atualizado com a demanda. </div>
+            </div>
+            </div>
+            <div class="accordion-group">
+            <div class="accordion-heading"> <a class="accordion-toggle"
+ data-toggle="collapse" data-parent="#FormDemand" href="#collapseThree">
+3. Alteração em Dados</a> </div>
+            <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner"> a. Identificação detalhada
+dos dados a serem alterados, seus valores e formatos;<br>
+b. Print de todas as telas ou relatórios onde os dados a serem
+alterados podem ser visualizados;<br>
+c. Finalidade e Justificativa para a Alteração. </div>
+            </div>
+            </div>
+            <div class="accordion-group">
+            <div class="accordion-heading"> <a class="accordion-toggle"
+ data-toggle="collapse" data-parent="#FormDemand" href="#collapseFour">
+4. Nova funcionalidade/sistema</a> </div>
+            <div id="collapseFour" class="accordion-body collapse">
+            <div class="accordion-inner"> Para especificação de uma
+nova funcionalidade ou sistema, deve-se preencher o <a
+ href="../FDH/GTI/Formulário%20DESP-Cli.docx">Documento de
+Especificação de Demanda Cliente</a>, utilizado para documentar
+detalhadamente o que se deseja do ponto de vista do cliente
+(finalidade, escopo, regras de negócio, etc..). </div>
+            </div>
+            </div>
+            </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td style="width: 420px;" valign="center">
+      <table style="width: 100%;" border="0">
+        <tbody>
+          <tr>
+            <td class="SarFont" colspan="2" rowspan="1"
+ style="font-weight: bold;">Cálculo de Pontos de Função</td>
+          </tr>
+          <tr>
+            <td><a
+ href="http://www.google.com.br/search?q=%22pontos+de+fun%E7%E3o%22"
+ target="_blank"><img
+ style="border: 0px solid ; width: 119px; height: 131px;"
+ alt="Ponto de Função" src="img/medicao.jpg"></a></td>
+            <td class="SarFont">&nbsp;A <b>STI</b> contrata
+desenvolvimento
+de software de empresa terceirizada e o custo da operação é determinado
+pelo número de Pontos de Função da demanda.<br>
+Para acessar <b>maiores informações</b> clique no <b>link
+da figura
+ao lado</b>.</td>
+          </tr>
+          <tr>
+            <td class="SarFont" colspan="2" rowspan="1">&nbsp;O <b>Ponto
+de função </b>é
+uma unidade de medida de software para estimar o tamanho de um sistema
+de informação baseando-se na funcionalidade percebida pelo usuário do
+sistema, independentemente da tecnologia usada para implementá-lo, da
+metodologia de desenvolvimento, da tecnologia ou da capacidade do grupo
+de desenvolvimento de desenvolver a aplicação.</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td style="width: 420px;" valign="top"><img alt=""
+ src="img/row.png" height="2" width="410"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table border="0">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="4" width="12">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td colspan="1" rowspan="4" width="12">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="SarFont" colspan="2" rowspan="1"
+ style="font-weight: bold;" align="left"><font size="+2">Demandas
+priorizadas junto a STI</font></td>
+    </tr>
+    <tr>
+      <td><img style="border: 0px solid ; width: 104px; height: 96px;"
+ alt="" src="img/imp2.jpg"></td>
+      <td class="SarFont" align="left">&nbsp;As
+demandas de TI são
+priorizadas de modo a que apenas as mais importantes, em determinado
+momento, sejam enviadas
+à STI para execução. Isso permite uma melhor utilização dos
+recursos disponíveis, tanto na STI como na SAR, já que os gestores dos
+sistemas
+precisam também interagir com a STI e homologar as demandas.<br>
+      <br>
+Veja a seguir as demandas atualmente
+priorizadas:</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;" colspan="2" rowspan="1"><img
+ style="width: 1071px;" alt=""
+ src="/FDH/AvGeral/AIR145/range_001.png"></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+</center>
+
+<!-- #include virtual="/inet2/trailer-bs.asp"  -->
